@@ -1,8 +1,30 @@
 // import functions and grab DOM elements
+import { getRandomThrow, didUserWin } from "./utils.js";
+
+const goButton = document.getElementById('go-button');
+const outcomeDisplay = document.getElementById('outcome');
+const winCount = document.getElementById('wins');
+const lossCount = document.getElementById('losses');
+const drawCount = document.getElementById('draws');
 
 // initialize global state
+let wins = 0;
+let losses = 0;
+let draws = 0;
 
 // set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+goButton.addEventListener('click', () => {
+  const computerChoice = getRandomThrow();
+  const userChoice = document.querySelector('input:checked');
+  const outcome = didUserWin(userChoice.value, computerChoice);
+  outcomeDisplay.textContent = `You chose ${userChoice.value} and the computer chose ${computerChoice}. It's a ${outcome}!`
+
+  if (outcome === "draw") draws++;
+  if (outcome === "loss") losses ++;
+  if (outcome === "win") wins ++;
+
+  winCount.textContent = wins;
+  lossCount.textContent = losses;
+  drawCount.textContent = draws;
+})
+
