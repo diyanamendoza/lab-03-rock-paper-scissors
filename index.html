@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
     <header>
-        <h1>Play Rock, Paper, Scissors!</h1>
+        <h1>Rock, Paper, Scissors!</h1>
         <p>Select either rock, paper, or scissors below. Remember:</p>
         <ul>
             <li>Paper beats rock</li>
@@ -23,14 +25,20 @@
     <main>
         <section class="game">
             <h2>Let's Play</h2>
-            <label>
-                <input type="radio" name="game-choice" value="rock" />
-                <img src="assets/rock.png">
-                <input type="radio" name="game-choice" value="paper" />
-                <img src="assets/paper.png">
-                <input type="radio" name="game-choice" value="scissors" />
-                <img src="assets/scissors.png">
-            </label>
+            <div id="radios">
+                <label>
+                    <input type="radio" name="game-choice" value="rock" />
+                    <div class="choice" id="rock">Rock</div>
+                </label>
+                <label>
+                    <input type="radio" name="game-choice" value="paper" />
+                    <div class="choice" id="paper">Paper</div>
+                </label>
+                <label>
+                    <input type="radio" name="game-choice" value="scissors" />
+                    <div class="choice" id="scissors">Scissors</div>
+                </label>
+            </div>
             <button id="go-button">Go</button>
         </section>
         <section class="game-outcome">
@@ -38,18 +46,20 @@
             <div id="outcome"></div>
         </section>
         <section class="stats">
-            <h3>Wins</h3>
-            <div id="wins">0</div>
-            <h3>Losses</h3>
-            <div id="losses">0</div>
-            <h3>Draws</h3>
-            <div id="draws">0</div>
+            <div id="wins-box">
+                <h3>Wins</h3>
+                <div id="wins">0</div>
+            </div>
+            <div id="losses-box">
+                <h3>Losses</h3>
+                <div id="losses">0</div>
+            </div>
+            <div id="draws-box">
+                <h3>Draws</h3>
+                <div id="draws">0</div>
+            </div>
         </section>
     </main>
-    <footer>
-
-    </footer>
-
     <script type="module" src="./app.js"></script>
 </body>
 
