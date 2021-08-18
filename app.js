@@ -6,6 +6,7 @@ const outcomeDisplay = document.getElementById('outcome');
 const winCount = document.getElementById('wins');
 const lossCount = document.getElementById('losses');
 const drawCount = document.getElementById('draws');
+const resetButton = document.getElementById('reset-button');
 
 // initialize global state
 let wins = 0;
@@ -28,3 +29,6 @@ goButton.addEventListener('click', () => {
   drawCount.textContent = draws;
 })
 
+resetButton.addEventListener('click', () => {
+  window.location.reload();
+})
