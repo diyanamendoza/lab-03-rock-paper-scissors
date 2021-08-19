@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Caveat Brush', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:burlywood;
+}
+
+header {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 3em;
+    color: black;
+    display:flex;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+    font-size: 1.3em;
+    display:flex;
+    justify-content: center;
+}
+
+.game {
+    border-top: 2px dotted black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#radios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+input {
+    display: none;
+}
+
+input:checked + div {
+    transform: scale(1.1);
+    transition: all .05s ease-in-out;
+    color: white;
+}
+
+
+.game-outcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    border-top: 2px dotted black;
+}
+
+button {
+    font-size: 2.5em;
+    font-family: 'Caveat Brush', cursive;
+    background-color: linen;
+    color: black;
+    padding: 10px;
+    width: 250px;
+    border: 3px solid black;
+    border-radius: 500px;
+    cursor: pointer;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+#result, #wins, #losses, #draws {
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.choice {
+    border-radius: 500px;
+    width: 250px;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 4em;
+}
+
+.choice:hover {
+    cursor: pointer;
+}
+
+#rock {
+    background-color: coral;
+}
+
+#paper {
+    background-color: lightskyblue;
+}
+
+#scissors {
+    background-color:lightseagreen;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;   
+}
+
+.reset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
