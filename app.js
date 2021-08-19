@@ -2,7 +2,7 @@
 import { getRandomThrow, didUserWin } from "./utils.js";
 
 const goButton = document.getElementById('go-button');
-const outcomeDisplay = document.getElementById('outcome');
+const outcomeDisplay = document.getElementById('result');
 const winCount = document.getElementById('wins');
 const lossCount = document.getElementById('losses');
 const drawCount = document.getElementById('draws');
